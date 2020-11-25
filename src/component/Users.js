@@ -41,10 +41,6 @@ class Users extends Component{
                             <td>name</td> 
                             <td>username</td>
                             <td>email</td> 
-                            <td colSpan="6" align="center">address</td>
-                            <td>phone</td>
-                            <td>website</td>
-                            <td colSpan="3" align='center'>company</td> 
                         </tr>
                     </thead>
                     {data.map(todo =>
@@ -54,17 +50,6 @@ class Users extends Component{
                             <td>{todo.name}</td> 
                             <td>{todo.username}</td>
                             <td>{todo.email}</td> 
-                            <td>{todo.address.street}</td>     
-                            <td>{todo.address.suite}</td>
-                            <td>{todo.address.city}</td> 
-                            <td>{todo.address.zipcode}</td>
-                            <td>{todo.address.geo.lat}</td> 
-                            <td>{todo.address.geo.lng}</td>
-                            <td>{todo.phone}</td>
-                            <td>{todo.website}</td> 
-                            <td>{todo.company.name}</td>
-                            <td>{todo.company.catchPhrase}</td>
-                            <td>{todo.company.bs}</td> 
                         </tr>
                     </thead>
                     )}
