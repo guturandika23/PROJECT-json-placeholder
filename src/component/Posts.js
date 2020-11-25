@@ -23,31 +23,37 @@ class Posts extends Component{
 
         return(
             <div>
-                <center>
-                    <Mui.ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-                        <Mui.Button href="/">Posts</Mui.Button>
-                        <Mui.Button href="/Comments">Comments</Mui.Button>
-                        <Mui.Button href="/Albums">Albums</Mui.Button>
-                        <Mui.Button href="/Photos">Photos</Mui.Button>
-                        <Mui.Button href="/Todos">Todos</Mui.Button>                   
-                        <Mui.Button href="/Users">Users</Mui.Button>                    
-                    </Mui.ButtonGroup>
-                </center>
+                <nav>
+                    <div class="nav-wrapper  deep-grape">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/">Posts</a></li>
+                        <li><a href="/Comments">Comments</a></li>
+                        <li><a href="/Albums">Albums</a></li>
+                        <li><a href="/Photos">Photos</a></li>
+                        <li><a href="/Todos">Todos</a></li>
+                        <li><a href="/Users">Users</a></li>
+                    </ul>
+                    </div>
+                </nav>
                 <h1 align="center">POSTS</h1>
-                    <table border="1">
-                        <tr>
-                        <td>postId</td>
+                    <table>
+                    <thead>
+                        <tr class="responsive-table card-panel blue darken-1 centered">
+                        <td>userId</td>
                         <td>id</td>
-                        <td>name</td>
-                        <td>email</td>
+                        <td>title</td>
                         <td>body</td>
                         </tr>
+                        </thead>
                         {data.map(todo =>
+                        <thead>
                         <tr hey={todo.postId}>
+                            <td>{todo.userId}</td>
                             <td>{todo.id}</td>
-                            <td>{todo.email}</td>
+                            <td>{todo.title}</td>
                             <td>{todo.body}</td>
                         </tr>
+                        </thead>
                         )}
                     </table>
             </div>
